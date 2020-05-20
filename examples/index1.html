@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="./assets/fav.png">
+
+  <title>Smart Table Examples</title>
+
+  <style>
+    body {
+      padding: 10px 20px;
+      position: relative;
+    }
+    
+    .sidebar {
+      position: fixed;
+      width: 100px;
+      top: 10px;
+      left: 30px;
+    }
+    
+    .sidebar>p>a {
+      color: #1b7fb0;
+    }
+    
+    .container {
+      position: absolute;
+      width: calc(100% - 200px);
+      left: 150px;
+    }
+    
+    .repo-link {
+      font-size: 16px;
+      color: #409eff;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+    
+    .smart-table a {
+      color: #409eff;
+    }
+    
+    .title {
+      text-align: center;
+      padding: 10px 0;
+      color: #4acccc;
+      margin: 0;
+    }
+    
+    .smart-table {
+      margin: 20px 0px;
+    }
+    
+    td img {
+      width: 30px;
+      height: 30px;
+    }
+    
+    .expand {
+      float: left;
+      width: 0;
+      height: 0;
+      border-width: 10px;
+      border-style: solid;
+      border-color: #c0c4cc transparent transparent transparent;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="smartTable1">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="1" fixed sort>Id</th>
+            <th colspan="1" fixed sort>Logo</th>
+            <th colspan="1" width="200" fixed>日期</th>
+            <th colspan="1" width="100" sort>姓名</th>
+            <th colspan="1">省份（包含自治区）</th>
+            <th colspan="1" sort>市区</th>
+            <th colspan="1">地址</th>
+            <th colspan="1" width="95" fixed>邮编</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><img src="./assets/js-table.png" /></td>
+            <td>2020-01-03</td>
+            <td>1王小虎</td>
+            <td>1上海</td>
+            <td>2长宁区</td>
+            <td>3上海市长宁区淞虹路888号</td>
+            <td>200331</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><img src="./assets/js-table.png" /></td>
+            <td>2020-02-03</td>
+            <td>2王小虎</td>
+            <td>3上海</td>
+            <td>4长宁区</td>
+            <td>2上海市长宁区淞虹路888号</td>
+            <td>200331</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><img src="./assets/js-table.png" /></td>
+            <td>2020-03-03</td>
+            <td>3王小虎</td>
+            <td>4上海</td>
+            <td>1长宁区</td>
+            <td>6上海市长宁区淞虹路888号</td>
+            <td>200331</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><img src="./assets/js-table.png" /></td>
+            <td>2020-02-03</td>
+            <td>2王小虎</td>
+            <td>3上海</td>
+            <td>4长宁区</td>
+            <td>2上海市长宁区淞虹路888号</td>
+            <td>200331</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><img src="./assets/js-table.png" /></td>
+            <td>2020-03-03</td>
+            <td>3王小虎</td>
+            <td>4上海</td>
+            <td>1长宁区</td>
+            <td>6上海市长宁区淞虹路888号</td>
+            <td>200331</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><img src="./assets/js-table.png" /></td>
+            <td>2020-02-03</td>
+            <td>2王小虎</td>
+            <td>3上海</td>
+            <td>4长宁区</td>
+            <td>2上海市长宁区淞虹路888号</td>
+            <td>200331</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td><img src="./assets/js-table.png" /></td>
+            <td>2020-03-03</td>
+            <td>3王小虎</td>
+            <td>4上海</td>
+            <td>1长宁区</td>
+            <td>6上海市长宁区淞虹路888号</td>
+            <td>200331</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr unsort>
+            <td>合计</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>6上海市长宁区淞虹路888号</td>
+            <td>200331</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    
+  </div>
+
+  <script>
+    new SmartTable({
+      selector: '#smartTable1',
+      height: 320,
+      selection: 'radio'
+    })
+  </script>
+
+</body>
+
+</html>

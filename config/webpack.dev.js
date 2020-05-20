@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = merge(common, {
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../examples/index.html'),
+      template: path.resolve(__dirname, '../examples/index1.html'),
       inject: 'head'
     })
   ],
