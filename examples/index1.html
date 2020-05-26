@@ -28,8 +28,8 @@
     
     .container {
       position: absolute;
-      width: calc(100% - 200px);
-      left: 150px;
+      width: calc(100% - 100px);
+      left: 50px;
     }
     
     .repo-link {
@@ -73,7 +73,7 @@
 <body>
 
   <div class="container">
-    <div id="smartTable1">
+    <div id="smartTable1" style="display: none;">
       <table>
         <thead>
           <tr>
@@ -174,11 +174,102 @@
       </table>
     </div>
     
+    <div id="smartTable3">
+      <table>
+        <thead>
+          <tr>
+            <th width="200" fixed>Id</th>
+            <th width="200">日期</th>
+            <th width="100">姓名</th>
+            <th>省份（包含自治区）</th>
+            <th>市区</th>
+            <th>地址</th>
+            <th width="95">邮编</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr expand="001">
+            <td>001</td>
+            <td>2020-05-02</td>
+            <td>王小虎2</td>
+            <td>上海2</td>
+            <td>长宁区2</td>
+            <td>上海市长宁区淞虹路888号2</td>
+            <td>200332</td>
+          </tr>
+          <tr expand-parent="001">
+            <td>001-1</td>
+            <td>2020-05-03</td>
+            <td>上小虎3</td>
+            <td>上海3</td>
+            <td>长宁区3</td>
+            <td>上海市长宁区淞虹路888号3</td>
+            <td>200333</td>
+          </tr>
+          <tr expand="002">
+            <td>002</td>
+            <td>2020-01-03</td>
+            <td>小小虎1</td>
+            <td>上海1</td>
+            <td>长宁区1</td>
+            <td>上海市长宁区淞虹路888号1</td>
+            <td>200331</td>
+          </tr>
+          <tr expand-parent="002">
+            <td>002-1</td>
+            <td>2020-05-04</td>
+            <td>王小虎4</td>
+            <td>上海4</td>
+            <td>长宁区4</td>
+            <td>上海市长宁区淞虹路888号4</td>
+            <td>200334</td>
+          </tr>
+          <tr expand-parent="002">
+            <td>002-2</td>
+            <td>2020-01-03</td>
+            <td>小小虎1</td>
+            <td>上海1</td>
+            <td>长宁区1</td>
+            <td>上海市长宁区淞虹路888号1</td>
+            <td>200331</td>
+          </tr>
+          <tr>
+            <td>003</td>
+            <td>2020-05-04</td>
+            <td>王小虎4</td>
+            <td>上海4</td>
+            <td>长宁区4</td>
+            <td>上海市长宁区淞虹路888号4</td>
+            <td>200334</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>001</td>
+            <td>2020-05-02</td>
+            <td>王小虎2</td>
+            <td>上海2</td>
+            <td>长宁区2</td>
+            <td>上海市长宁区淞虹路888号2</td>
+            <td>200332</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
   </div>
 
   <script>
+    // new SmartTable({
+    //   selector: '#smartTable1',
+    //   height: 320
+    // })
+
     new SmartTable({
-      selector: '#smartTable1',
+      selector: '#smartTable3',
+      align: 'left',
+      expand: true,
+      defaultExpandAll: true,
       height: 320
     })
   </script>
