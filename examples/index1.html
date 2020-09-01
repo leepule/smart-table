@@ -72,9 +72,20 @@
 
 <body>
 
+  <button onclick="destory()">销毁</button>
   <div class="container">
-    <div id="smartTable1" style="display: none;">
+    <div id="smartTable1">
       <table>
+        <colgroup>
+          <col width="100">
+          <col width="124">
+          <col width="200">
+          <col width="100">
+          <col width="254">
+          <col width="124">
+          <col width="207">
+          <col width="95">
+        </colgroup>
         <thead>
           <tr>
             <th colspan="1" fixed sort>Id</th>
@@ -174,7 +185,7 @@
       </table>
     </div>
     
-    <div id="smartTable3">
+    <div id="smartTable3" style="display: none;">
       <table>
         <thead>
           <tr>
@@ -260,18 +271,22 @@
   </div>
 
   <script>
-    // new SmartTable({
-    //   selector: '#smartTable1',
-    //   height: 320
-    // })
-
-    new SmartTable({
-      selector: '#smartTable3',
-      align: 'left',
-      expand: true,
-      defaultExpandAll: true,
+    var a = new SmartTable({
+      selector: '#smartTable1',
       height: 320
     })
+
+    function destory() {
+      console.log(a)
+    }
+
+    // new SmartTable({
+    //   selector: '#smartTable3',
+    //   align: 'left',
+    //   expand: true,
+    //   defaultExpandAll: true,
+    //   height: 320
+    // })
   </script>
 
 </body>
